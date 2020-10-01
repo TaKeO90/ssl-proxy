@@ -10,6 +10,7 @@ A handy and simple way to add SSL to your thing running on a VM--be it your pers
 
 ## Usage
 ### With auto self-signed certificates
+
 ```sh
 ssl-proxy -from 0.0.0.0:4430 -to 127.0.0.1:8000
 ```
@@ -28,6 +29,11 @@ This will immediately generate, fetch, and serve real LetsEncrypt certificates f
 ssl-proxy -cert cert.pem -key myKey.pem -from 0.0.0.0:4430 -to 127.0.0.1:8000
 ```
 You can provide your own existing certs, of course. Jenkins still has issues serving the fullchain certs from letsencrypt properly, so this tool has come in handy for me there. 
+
+### Using altnames Options
+```console
+ssl-proxy  -from localhost:4430 -to 127.0.0.1:8000 -altnames localhost
+```
 
 ### Redirect HTTP -> HTTPS
 Simply include the `-redirectHTTP` flag when running the program.
