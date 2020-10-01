@@ -31,7 +31,11 @@ ssl-proxy -cert cert.pem -key myKey.pem -from 0.0.0.0:4430 -to 127.0.0.1:8000
 You can provide your own existing certs, of course. Jenkins still has issues serving the fullchain certs from letsencrypt properly, so this tool has come in handy for me there. 
 
 ### Using altnames Options
+<<<<<<< HEAD
 ```sh
+=======
+```console
+>>>>>>> origin/doc
 ssl-proxy  -from localhost:4430 -to 127.0.0.1:8000 -altnames localhost
 ```
 
